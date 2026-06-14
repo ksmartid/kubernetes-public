@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: nginx
@@ -18,6 +18,6 @@ spec:
       - name: ecr-secret
       containers:
       - name: eks-nginx
-        image: 431417818422.dkr.ecr.ap-northeast-2.amazonaws.com/eks-nginx:v1.0
+        image: 431417818422.dkr.ecr.ap-northeast-2.amazonaws.com/eks-nginx:v3.0
         ports:
         - containerPort: 80
